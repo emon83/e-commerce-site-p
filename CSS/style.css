@@ -1,8 +1,11 @@
+/* Universal selector */
 *{
     margin: 0;
     padding: 0;
     font-family: sans-serif;
 }
+
+/* banner section */
 .container{
     width: 100%;
     height: 100vh;
@@ -22,7 +25,7 @@ a{
     font-size: 2rem;
     letter-spacing: 1;
 }
-.SearchArea{
+.search__area{
     position: fixed;
     right: 90px;
     top: 50px;
@@ -38,7 +41,7 @@ a{
     z-index: 1;
     border: 1px solid rgba(167,158,245,0.1);
 }
-.searchbox input{
+.search__box input{
     width: 90px;
 	height: 20px;
 	border: none;
@@ -48,7 +51,7 @@ a{
 	font-size: 1rem;
 	padding: 0px 10px;
 }
-.searchbox input::placeholder{
+.search__box input::placeholder{
     color: #1d1d1d;
     font-weight: 400;
     letter-spacing: 2px;
@@ -64,13 +67,13 @@ a{
 .section1 img{
     height: 300px;
 }
-.section1Button{
+.section1__button{
     position: absolute;
     top: 50%;
     left: 90%;
     transform: translate(-90%,-50%);
 }
-.section1Button h1,h2{
+.section1__button h1,h2{
     font-family:sans-serif;
     font-weight: bold;
     margin: 0px;
@@ -84,7 +87,7 @@ a{
 span{
     color: #7A72FF;
 }
-.section1Button h1{
+.section1__button h1{
     letter-spacing:30px;
 }
 .btn{
@@ -111,7 +114,7 @@ span{
     background-color: #6e64ff;
     transition: all ease 0.5s;
 }
-.iconArea{
+.icon__area{
     position: fixed;
     left: 30px;
     top: 50%;
@@ -122,29 +125,30 @@ span{
     padding: 5px 0px;
     z-index: 1;
 }
-.iconArea a{
+.icon__area a{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px 15px;
 }
-.iconArea a i{
+.icon__area a i{
     color: rgba(39,39,39,0.80);
 }
-.iconArea a:hover .fa-facebook-f{
+.icon__area a:hover .fa-facebook-f{
 	color: #3b5998;
 }
-.iconArea a:hover .fa-twitter{
+.icon__area a:hover .fa-twitter{
 	color: #00acee ;
 }
-.iconArea a:hover .fa-instagram{
+.icon__area a:hover .fa-instagram{
 	color:  #3f729b ;
 }
-.iconArea a:hover .fa-youtube{
- 
-	color: 	#FF0000;
+.icon__area a:hover .fa-youtube{
+ 	color: 	#FF0000;
 }
+
+/* Product section */
 .productSection{
     width: 85%;
     background-color: #FFFFFF;
@@ -230,6 +234,8 @@ span{
     color: #fff;
     transition: all ease 0.3s;
 }
+
+/* about section */
 .about{
     display: flex;
     width: 85%;
@@ -266,6 +272,8 @@ span{
     color: #bdbdbd;
     letter-spacing: 0.5px;
 }
+
+/* notification section */
 .Notification{
     width: 100%;
     height: 250px;
@@ -317,6 +325,8 @@ span{
     background-color: #6b60ec;
     transition: all ease 0.5s;
 }
+
+/* footer section */
 footer{
     background-color: black !important;
     padding: 20px;
@@ -325,3 +335,5 @@ footer p{
     text-align: center;
     color: #fff;
 }
+
+/* responsive section */
