@@ -6,9 +6,12 @@
 }
 
 /* banner section */
-.container{
+.nav{
     width: 100%;
     height: 100vh;
+}
+.nav{
+    height: 100px;
 }
 a{
     text-decoration: none;
@@ -58,22 +61,18 @@ a{
     font-size: 0.8rem;
     font-family: poppins;
 }
-.section1{
-    position: absolute;
-    left: 15%;
-    top: 50%;
-    transform: translate(-15,-50%);
+.banner__section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
 }
-.section1 img{
-    height: 300px;
+.banner__section img{
+    height: 600px;
+    width: 600px;
 }
-.section1__button{
-    position: absolute;
-    top: 50%;
-    left: 90%;
-    transform: translate(-90%,-50%);
-}
-.section1__button h1,h2{
+
+.banner__content h1,h2{
     font-family:sans-serif;
     font-weight: bold;
     margin: 0px;
@@ -87,7 +86,7 @@ a{
 span{
     color: #7A72FF;
 }
-.section1__button h1{
+.banner__content h1{
     letter-spacing:30px;
 }
 .btn{
@@ -158,7 +157,7 @@ span{
     flex-direction: column;
     align-items: center ;
     padding: 40px 20px;
-    margin-top: -60px;
+    margin-top: 60px;
     position: relative;
     background-size: 1000px ;
     border-radius: 10px;
@@ -173,13 +172,21 @@ span{
     font-size: 2rem;
     color: #323543;
 }
-.product{
+/* .product{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin: 10px 0px;
     width: 100%;
+} */
+.product{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 10px 0px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 .productBox{
     width: 250px;
@@ -335,5 +342,74 @@ footer p{
     text-align: center;
     color: #fff;
 }
+.hidden{
+    display: none;
+}
 
 /* responsive section */
+@media only screen and (max-width:576px) {
+    .nav a{
+        margin-left: -60px;
+    }
+    .nav .search__area {
+      right: 0;
+      top: 10px;
+    }
+    .banner__section {
+        flex-direction: column;
+    }
+    .banner__section img{
+        height: 300px;
+        width: 300px;
+        margin-left: 10px;
+    }
+    .banner__content {
+       width: 100%;
+       margin-left: 30px;
+    }
+    .banner__content h1,h2{ 
+        font-size: 3rem;
+        letter-spacing: 1.5;
+    }
+    .product{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .about{
+        flex-direction: column;
+        row-gap: 50px;
+    }
+    .aboutBox{
+        width: 100%;
+    }
+    .productSection{
+        width: 100%;
+        margin-top: 30px;
+        padding-top: 0;
+    }
+    .Notification{
+        margin: 0 5px;
+    }
+    .NotificationInput{
+        width: 100%;
+        margin-left: 30px;
+    }
+    footer{
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width:577px) and (max-width:992px) {
+    .banner__section {
+        flex-direction: column;   
+    }
+    .product{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .about{
+        flex-direction: column;
+        row-gap: 50px;
+    }
+    .aboutBox{
+        width: 100%;
+    }
+}
